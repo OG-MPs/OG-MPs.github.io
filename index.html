@@ -26,7 +26,6 @@
                 <source src="videos/long_shot.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <h3 class="video-description">Infinite terrain parkour for various terrain tracks</h3>
         </div>
     </div>
     <div class = "abstract">
@@ -35,26 +34,83 @@
         </h1> 
         <p>Put abstract content here</p>
     </div>
-    <section class="section">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-full-width">
-              <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Extreme Cases</h2>
-                
-                  <div class="row">
+    <div class = "framework">
+        <h1 class="title is-2" style="text-align: center; padding-top: 50px;">Conceptual Framework</h1>
+        <img src="images/frame_work.png" style = "display: block;margin-left: auto;margin-right: auto; width: 1000px;">
+    </div>
+    
+    <div class="paused_vis">
+        <h1 class="title is-2" style="text-align: center; padding-top: 50px;">Planning and Control</h1>
+        <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/paused_vis.mp4" width="40%" style="border-radius:10px;display: block;margin-left: auto;margin-right: auto;  "></video>
+    </div>
+
+    
+    
+    <div class = "ref_vs_true">
+        <h1 class="title is-2" style="text-align: center; padding-top: 50px;">Comparison with reference trajectory</h1>
+        <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/refvstrue.mp4" width="40%" style="border-radius:10px;display: block;margin-left: auto;margin-right: auto;  "></video>
+        <p style="font-size: x-large;">The trajectories visualised correspond to the previous time horizon</p>
+    </div>
+
+    <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Preview Horizon variation</h1>
+            
+              
+                <div class="row">
+                  <div class="columns is-centered">
                     <div class="col">
-                        <video autoplay="" muted="" loop="" playsinline="" controls="" src="./resources/Step/Step0.5.mp4" width="100%" style="border-radius:30px; "></video>
+                      <h2 class="subtitle" style ="margin-left: auto;">
+                        7
+                      </h2>
+                      <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/prev_length/7.mp4" width="100%" style="border-radius:10px; "></video>
                     </div>
                     <div class="col">
-                      <video autoplay="" muted="" loop="" playsinline="" controls="" src="./resources/Gap/gap0.8.mp4" width="100%" style="border-radius:30px; "></video>
+                        <h2 class="subtitle">
+                         15
+                        </h2>
+                        <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/prev_length/15.mp4" width="100%" style="border-radius:10px; "></video>
+                    </div>
+                    <div class="col">
+                      <h2 class="subtitle">
+                        30
+                      </h2>
+                      <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/prev_length/30.mp4" width="100%" style="border-radius:10px; "></video>
                     </div>
                   </div>
-                  <br>
-                
-              
-            </div> 
-          </div>
+                </div>
+                <br>
+          </div> 
         </div>
-    </section>
+    </div>
+
+    <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h1 class="title is-2" style="text-align: center; padding-top: 30px;">Task Parameter variation</h1>
+                <div class="row">
+                  <div class="columns is-centered">
+                    <div class="col">
+                      <h2 class="subtitle" style ="margin-left: auto;">
+                        Variation of block height
+                      </h2>
+                      <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/task_param/block.mp4" width="100%" style="border-radius:10px; "></video>
+                    </div>
+                    <div class="col">
+                        <h2 class="subtitle">
+                        Variation of gap width
+                        </h2>
+                        <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/task_param/gap.mp4" width="100%" style="border-radius:10px; "></video>
+                    </div>
+                  </div>
+                </div>
+                <br>
+          </div> 
+        </div>
+    </div>
+
+    
+
 </body>
 </html>
