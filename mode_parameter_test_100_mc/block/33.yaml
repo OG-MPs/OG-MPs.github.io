@@ -1,0 +1,68 @@
+sim_params:
+  model_path: dtsd/envs/rsc/models/mini_biped/xmls/biped_mesh_vis_simple_col.xml
+  render: false
+  init_viewer_every_reset: false
+  record: true
+visualize_reference: false
+p_gain: 30
+d_gain: 0.5
+simrate: 60
+robot: drcl_biped
+observations:
+  robot_state: null
+  clock_osu: null
+  mode_latent: null
+  terrain_xlen_infront: 0.5
+terminations:
+  total_reward_min_thresh: 0.0
+  com_height_min_thresh: 0.3
+  com_height_min_abs_thresh: 0.3
+rewards:
+  base_ori_error_exp_weight: 5
+  base_pos_error_exp_weight: 5
+  scales:
+    base_ori_ref_error: 0.5
+    base_pos_ref_error: 0.5
+max_epi_steps: 100
+prev_rtm:
+  prediction_horizon: 30
+  entry: preview_cmmp.preview_v3.prev_rtm
+  state_feedback:
+  - x
+  - y
+  - z
+  - x_dot
+  - z_dot
+  - y_dot
+  scan_xlen_infront: 1.0
+env_entry: dtsd.envs.biped_parkour.biped_env
+initialisations:
+  set_robot_nominal: null
+actions:
+  pd_targets:
+  - 0
+  - 10
+task:
+  name: parkour
+  sample_type: uniform
+  track_x_length: 0.4
+  track_elements:
+    block:
+      manipulate_terrain: true
+      param_names:
+      - start
+      - length
+      - height
+      param_dist:
+        type: discrete
+        sampling: uniform
+        points:
+        - - 0.45
+          - 0.3333333333333333
+          - 0.21666666666666667
+mode_encoder:
+  model_path: "dtsd/analysis_results/fgb_fx0_s\u03C1_ae32/prtm3_vx1/dim_2/model_0.pt"
+  input_type: base_only
+  offset_x0:
+  - x
+logdir: /home1/lkrajan/drcl_projects/cpptf_v2/logs/bg_b_pr3_2_ts_3/0/

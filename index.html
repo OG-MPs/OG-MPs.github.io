@@ -33,7 +33,13 @@
         <h1 >
             Abstract
         </h1> 
-        <p>Put abstract content here</p>
+        <p style="text-align:justify;margin-left: 420px;margin-right: 420px;font-size: large;">Synthesizing agile and versatile control for highly dynamic and inherently unstable robots to solve a given task satisfactorily is an open challenge. 
+          When given computationally tractable models, model-based optimal control and model-free learning, when provided with heuristics or task-specific hacks, have shown compelling empirical results. 
+          However, a more systematic approach that exploits the available structure and hierarchy in the problem while being flexible enough to benefit from any known priors like first principles is absent. 
+          To this end, in this work, we introduce an approach that utilizes any task-based priors through oracles and leverages task-vital multimodality with multimodal policies. 
+          Such oracles being sub-optimal in general, we propose to use them to guide the multimodal policy's exploration in training while providing latent mode plans during inference. 
+          Our method, being non-restrictive compared to a typical planner and tracking-controller architecture, results in a single multimodal policy that learns a rich collection of behaviors with diverse variations of interpretable underlying parameters. 
+          Specifically, we apply our framework to the bipedal parkour task and demonstrate extremely dynamic maneuvers with smooth transitions between the learned behavior variants. </p>
     </div>
     <div class = "framework">
         <h1 class="title is-2" style="text-align: center; padding-top: 50px;">Proposed Approach</h1>
@@ -45,7 +51,7 @@
         <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/paused_vis.mp4" width="40%" style="border-radius:10px;display: block;margin-left: auto;margin-right: auto;  "></video>
     </div>
 
-    
+      
     
     <div class = "ref_vs_true">
         <h1 class="title is-2" style="text-align: center; padding-top: 50px;">Comparison with reference trajectory</h1>
@@ -96,21 +102,26 @@
             <h1 class="title is-2" style="text-align: center; padding-top: 50px;">Task Parameter variation</h1>
                 <div class="row">
                   <div class="columns is-centered">
-                    <div class="col">
+                    <div class="col1">
                       <h2 class="subtitle">
-                        Variation of block height
+                        Block parameter variations
                       </h2>
-                      <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/task_param/block.mp4" width="100%" style="border-radius:10px; "></video>
-                    </div>
-                    <div class="col">
-                        <h2 class="subtitle">
-                        Variation of gap width
-                        </h2>
-                        <video autoplay="" muted="" loop="" playsinline="" controls="" src="videos/task_param/gap.mp4" width="100%" style="border-radius:10px; "></video>
+                      <video autoplay="" muted="" loop="" playsinline=""  src="videos/task_param/block_var.mp4" width="60%" style="margin-right: 100px;"></video>
                     </div>
                   </div>
                 </div>
                 <br>
+                <div class="row">
+                  <div class="columns is-centered">
+                    <div class="col1">
+                      <h2 class="subtitle">
+                        Gap parameter variations
+                      </h2>
+                      <video autoplay="" muted="" loop="" playsinline=""  src="videos/task_param/gap_var.mp4" width="60%" style="margin-right: 0px;"></video>
+                    </div>
+                  </div>
+                </div>
+                
           </div> 
         </div>
     </div>
