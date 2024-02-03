@@ -148,3 +148,25 @@ a:hover{
     /* margin-right: 80px; */
     text-align: center;
 }
+
+.button.is-rounded {
+    border-radius: 290486px;
+    padding-left: calc(1em + 0.25em);
+    padding-right: calc(1em + 0.25em);
+}
+
+button.is-normal {
+    font-size: 3rem;
+}
+
+.button.is-dark {
+    background-color: #363636;
+    border-color: transparent;
+    color: #fff;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}

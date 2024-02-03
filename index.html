@@ -16,7 +16,16 @@
             <a href="https://nike353.github.io/">Nikhil Sobanbabu</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://viterbi.usc.edu/directory/faculty/Nguyen/Quan">Quan Nguyen</a></h2>
-        <h2> Paper to be submitted</h2>
+        <span class="link-block">
+          <a href="https://drive.google.com/file/d/1wTfIlxby772najfByWP5t_y4lyqzEz99/view?usp=sharing" class="external-link button is-normal is-rounded is-dark" target="_blank">
+            <span class="icon">
+                <i class="ai ai-arxiv">
+                </i>
+
+            </span>
+            <span>Paper</span>
+          </a>
+        </span>
     </div>
     
     <div class="content">
@@ -33,17 +42,31 @@
         <h1 >
             Abstract
         </h1> 
-        <p style="text-align:justify;margin-left: 420px;margin-right: 420px;font-size: large;">Synthesizing agile and versatile control for highly dynamic and inherently unstable robots to solve a given task satisfactorily is an open challenge. 
-          When given computationally tractable models, model-based optimal control and model-free learning, when provided with heuristics or task-specific hacks, have shown compelling empirical results. 
-          However, a more systematic approach that exploits the available structure and hierarchy in the problem while being flexible enough to benefit from any known priors like first principles is absent. 
-          To this end, in this work, we introduce an approach that utilizes any task-based priors through oracles and leverages task-vital multimodality with multimodal policies. 
-          Such oracles being sub-optimal in general, we propose to use them to guide the multimodal policy's exploration in training while providing latent mode plans during inference. 
-          Our method, being non-restrictive compared to a typical planner and tracking-controller architecture, results in a single multimodal policy that learns a rich collection of behaviors with diverse variations of interpretable underlying parameters. 
-          Specifically, we apply our framework to the bipedal parkour task and demonstrate extremely dynamic maneuvers with smooth transitions between the learned behavior variants. </p>
+        <p style="text-align:justify;margin-left: 420px;margin-right: 420px;font-size: large;">Amidst task-specific learning-based control synthesis frameworks that achieve impressive empirical results, a
+          unified framework that systematically constructs an optimal
+          policy for sufficiently solving a general notion of a task is
+          absent. Hence, we propose a theoretical framework for a task-centered control synthesis leveraging two critical ideas: 1) oracle-guided policy optimization for the non-limiting integration of
+          sub-optimal task-based priors to guide the policy optimization
+          and 2) task-vital multimodality to break down solving a task
+          into executing a sequence of behavioral modes. The proposed
+          approach results in highly agile parkour and diving on a 16-DoF
+          dynamic bipedal robot. The obtained policy advances indefinitely
+          on a track, performing leaps and jumps of varying lengths
+          and heights for the parkour task. Corresponding to the dive
+          task, the policy demonstrates front, back, and side flips from
+          various initial heights. Finally, we introduce a novel latent mode
+          space reachability analysis to study our policies’ versatility and
+          generalization by computing a feasible mode set function through
+          which we certify a set of failure-free modes for our policy to
+          perform at any given state. </p>
     </div>
     <div class = "framework">
         <h1 class="title is-2" style="text-align: center; padding-top: 50px;">Proposed Approach</h1>
-        <img src="images/frame_work.png" style = "display: block;margin-left: auto;margin-right: auto; width: 1000px;">
+        <img src="images/frame_work_final.png" style = "display: block;margin-left: auto;margin-right: auto; width: 1000px;">
+        <p style = "text-align:justify;margin-left: 420px;margin-right: 420px;font-size: large;">Overview of OGMP: a) The breakdown of a task into its principal modes with a mode and mode parameter set b) Guided exploration
+          by constraining the search space around the local neighborhood of the oracle’s reference c) Mode encoder: an LSTM autoencoder trained
+          on a custom modal dataset by minimizing reconstruction loss d) Multimodal policy trained with oracle guided policy optimization on a task
+          environment e) The closed-loop inference pipeline with the high-level oracle and the low-level multimodal policy</p>
     </div>
 
     <div class="paused_vis">
